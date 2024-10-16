@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact US</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="container-head">
+        <div class="navbar">
+          <div class="logo">
+            <!-- <img src="images/logo.png" alt="" width="125px" /> -->
+              <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: coral;">RedStor</h1>
+  
+          </div>
+          <nav>
+            <ul class="nav-link" id="nav-links">
+              <li><a href="index.html" target="_blank">Home</a></li>
+              <li><a href="products.html" target="_blank">Products</a></li>
+              <li><a href="product-details.html" target="_blank">About</a></li>
+              <li><a href="cat.html" target="_blank">Conatact</a></li>
+              <li><a href="account.html" target="_blank">Account</a></li>
+            </ul>
+          </nav>
+          <img src="./images/cart.png" alt="" width="30px" height="30px" class="listCart" style="display: block; cursor: pointer;" href="product-details.html" />
+          <img src="./images/menu.png" class="menu-icon" id="menu-icon"  onclick="menuToggle()">
+        </div>
+      </div>
+    </div>
+      <div class="main">
+    <form action="" class="form-container">
+      <h1>Contact us</h1>
+      <div class="container">
+        <div class="col-1">
+            <div class="cols">
+                <label for="phone"><span>&#9743; </span> CALL US</label>
+                <h2>1-234-567-8901</h2>
+            </div>
+            <div class="cols">
+                <label for="location"><span><i class="fa fa-map-marker" style="font-size:20px;color:red"></i></span>LOCATION</label>
+                <h2>121 XYZ Street Los Santos</h2>
+            </div>
+            <div class="cols">
+                <label for=""><span>&#x1F552;</span>BUSSINESS HOURS</label>
+                <h3>Mon-Fri ........... 10am-8pm,Sat,Sun......Closed</h3>
+            </div>
+        </div>
+        <div class="col-1 col-2">
+            <label for="name">Name:</label><br />
+          <input type="text" id="name" name="name" required /><br />
+          <label for="email">Email:</label><br />
+          <input type="email" id="email" name="email" required /><br />
+          <label for="subject">Subject:</label><br />
+          <input type="text" id="subject" name="subject" required /><br />
+          <label for="message">Message:</label><br />
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <br />
+        </div>
+      </div>
+      <button class="submit-btn" onclick="submitForm()">SUBMIT THE FORM</button>
+    </form>
+      </div>
+    <script>
+        function submitForm() {
+            alert("Form submitted successfully!");
+        }
+    </script>
+  </body>
+</html>

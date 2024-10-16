@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedStor Shopping Cart</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+            scroll-behavior: auto;
+            height: auto; 
+        }
+        .header {
+            background-color: #b3f3f4;
+            padding: 20px 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: coral;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 20px;
+        }
+        .cart {
+            padding: 20px;
+        }
+        .cart ul {
+            display: inline-flex;
+            gap: 15px;
+            flex-direction: column;
+            list-style-type: none;
+            padding: 0;
+        }
+        .cart li {
+            width: 100%;
+            border: 1px solid #333;
+            padding: 10px;
+            margin-bottom: 10px;
+            /* display: flex; */
+            display: inline-flex;
+            gap: 30px;
+        }
+        .cart button{
+            padding: 10px 15px;
+            background-color: #b3f3f4;
+            outline: none;
+            border: none;
+            cursor: pointer; 
+            transition: 1s ease-in-out ;
+        }
+        .cart button:active{
+            background-color: #999;
+            color: white;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            margin-top: 50px;
+        }
+    </style>
+    <script src="product.js" defer></script>
+    <script src="cart.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <h1 id="redstor">RedStor</h1>
+                </div>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="account.html">Account</a>
+                    <a href="cart.html" id="cart-btn" class="cart-btn">Cart (0)</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="data"></div>
+    <div class="container">
+        <div id="cart" class="cart">
+            <!-- Cart contents will be dynamically inserted here -->
+        </div>
+    </div>
+    <script src="cart.js"></script>
+</body>
+</html>

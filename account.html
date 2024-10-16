@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RedStor | Ecommerce Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- <div class="header"> -->
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <img src="images/logo.png" alt="" width="125px" />
+        </div>
+        <nav>
+          <ul class="nav-link" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Conatact</a></li>
+            <li><a href="">Account</a></li>
+          </ul>
+        </nav>
+        <img src="./images/cart.png" alt="" width="30px" height="30px" />
+        <img
+          src="./images/menu.png"
+          class="menu-icon"
+          id="menu-icon"
+          onclick="menuToggle()"
+        />
+      </div>
+    </div>
+
+    <div class="account-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <img src="./images/image1.png" alt="" width="100%" />
+          </div>
+          <div class="col-2">
+            <div class="form-container">
+              <div class="form-btn">
+                <span onclick="login()"> Login </span>
+                <span onclick="register()">Register</span>
+                <hr id="Indicator" />
+              </div>
+              <form id="LoginForm">
+                <input type="text" placeholder="Username" />
+                <input type="password" name="" placeholder="Password" id="" />
+                <br />
+                <button class="btn">Login</button>
+                <a href="">Forgot password</a>
+              </form>
+
+              <form id="RegForm">
+                <input type="text" placeholder="Username" />
+                <input type="email" name="" placeholder="Email" id="" />
+                <input type="password" name="" placeholder="Password" id="" />
+                <br />
+                <button class="btn">Register</button>
+                <a href="">Forgot password</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="small-container-in">
+          <div class="footer-col-1">
+            <h3>Download Our App</h3>
+            <p>Download Our App for Android and Iphone.</p>
+            <div class="app-logo">
+              <img src="./images/play-store.png" alt="" />
+              <img src="./images/app-store.png" alt="" />
+            </div>
+          </div>
+          <div class="footer-col-2">
+            <img src="./images/logo-white.png" alt="" />
+            <p>
+              Our Purpose is To Sustainably Make The Pleasure and Benefits of
+              Sports Accessible to the Many.
+            </p>
+          </div>
+          <div class="footer-col-3">
+            <h3>Useful Links</h3>
+            <ul>
+              <li>Coupons</li>
+              <li>Blog</li>
+              <li>Return Policy</li>
+              <li>Join Affiliate</li>
+            </ul>
+          </div>
+          <div class="footer-col-4">
+            <h3>Follow us</h3>
+            <ul>
+              <li>Facebook</li>
+              <li>Twitter</li>
+              <li>Instagram</li>
+              <li>You Tube</li>
+            </ul>
+          </div>
+        </div>
+        <p>- &#9475; Copyright 2024 &#9475; -</p>
+      </div>
+    </div>
+
+    <script>
+      var MenuItems = document.getElementById("nav-links");
+      MenuItems.style.maxHeight = "0px";
+      function menuToggle() {
+        if (MenuItems.style.maxHeight == "0px") {
+          MenuItems.style.maxHeight = "200px";
+        } else {
+          MenuItems.style.maxHeight = "0px";
+        }
+      }
+    </script>
+
+    <script>
+      var ProductImg = document.getElementById("product-img");
+      var smallImg = document.getElementsByClassName("small-img");
+      smallImg[0].onclick = function () {
+        ProductImg.src = this.src;
+      };
+      smallImg[1].onclick = function () {
+        ProductImg.src = this.src;
+      };
+      smallImg[2].onclick = function () {
+        ProductImg.src = this.src;
+      };
+      smallImg[3].onclick = function () {
+        ProductImg.src = this.src;
+      };
+    </script>
+
+    <!-- toggle form -->
+    <script>
+      var LoginForm = document.getElementById("LoginForm");
+      var RegForm = document.getElementById("RegForm");
+      var Indicator = document.getElementById("Indicator");
+
+      function register() {
+        RegForm.style.transform = "translate(0px)";
+        LoginForm.style.transform = "translate(0px)";
+        Indicator.style.transform = "translate(150px)";
+      }
+      function login() {
+        RegForm.style.transform = "translate(330px)";
+        LoginForm.style.transform = "translate(330px)";
+        Indicator.style.transform = "translateX(20px)";
+      }
+
+      var MenuItems = document.getElementById("nav-links");
+      MenuItems.style.maxHeight = "0px";
+      function menuToggle() {
+        if (MenuItems.style.maxHeight == "0px") {
+          MenuItems.style.maxHeight = "200px";
+        } else {
+          MenuItems.style.maxHeight = "0px";
+        }
+      }
+    </script>
+  </body>
+</html>
